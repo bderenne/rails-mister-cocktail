@@ -11,3 +11,27 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+  p {
+   font-size: 15px;
+  }
+}
+
+.banner {
+  width: 100%;
+  background-color: #FF7469;
+  padding: 70px 48px 70px 48px;
+
+  h1 {
+   font-weight: 800;
+  }
+
+  h2 {
+   font-size: 24px;
+  }
+
+}
+

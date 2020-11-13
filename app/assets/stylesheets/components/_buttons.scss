@@ -1,0 +1,25 @@
+.btn-flat {
+  color: black;
+  font-weight: 800;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: white;
+  transition: background 0.3s ease;
+  &:hover {
+   background: #F73A2C;
+   color: black;
+  }
+}
+
+.btn-flat-2 {
+  color: black;
+  font-weight: 800;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #F73A2C;
+  transition: background 0.3s ease;
+  &:hover {
+   background: black;
+   color: white;
+  }
+}

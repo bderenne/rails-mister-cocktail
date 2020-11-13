@@ -1,0 +1,38 @@
+<div class="banner">
+  <p><%= link_to "Not sure? Go back", root_path %></p>
+  <h1 class="text-center"><%= @cocktail.name %></h1>
+</div>
+
+<div class="container">
+  <h2 class="py-3"> Here the recipe <h2>
+
+
+  <ul class="list-inline list-unstyled">
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.ingredient.name %></li>
+      <li><%= dose.description %></li>
+      <li><%= link_to 'remove', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></li>
+<!--       <li><%= link_to 'remove the cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } %></li>
+ -->
+    <% end %>
+  </ul>
+<!--   <p>add an ingredient</p>
+ -->
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%=f.input :description %>
+    <%=f.association :ingredient %>
+    <%= f.submit "Create", class: "btn-flat-2" %>
+  <% end %>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
